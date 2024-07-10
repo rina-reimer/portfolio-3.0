@@ -1,4 +1,5 @@
 import { Space_Mono } from "next/font/google";
+import { Fraunces } from "next/font/google";
 import "./globals.css";
 
 const space = Space_Mono({ subsets: ["latin"], weight: ["700"] });
