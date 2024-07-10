@@ -11,7 +11,7 @@ export default function Work() {
   return (
     <main className="flex flex-row bg-beige min-h-screen">
       <div className="fixed object-center lg:py-[25vh] py-8 lg:px-8 px-[25vw] z-[999]">
-        <div className="flex lg:h-[50vh] h-24 lg:w-24 w-[50vw] lg:flex-col flex-row justify-center items-center lg:space-y-16 lg:space-x-0 space-y-0 space-x-16 bg-navy rounded-lg text-white font-extrabold">
+        <div className="flex lg:h-[50vh] h-24 lg:w-24 w-[50vw] lg:flex-col flex-row justify-center items-center lg:space-y-16 lg:space-x-0 space-y-0 md:space-x-16 space-x-4 bg-navy rounded-lg text-white font-extrabold">
           <Link href="/"><HomeIcon className="size-16 text-beige basis-1/3 left"></HomeIcon></Link>
           <Link href="/about"><IdentificationIcon className="size-16 text-beige basis-1/3"></IdentificationIcon></Link>
           <Link href="/work"><ArchiveBoxIcon className="size-16 text-navy bg-beige rounded-lg basis-1/3"></ArchiveBoxIcon></Link>
@@ -27,8 +27,8 @@ export default function Work() {
         <div className="card-grid grid md:grid-cols-2 grid-cols-1 gap-16 px-16">
 
           {/* Project 6 */}
-          <div className={`card ${flip ? "flip" : ""} relative flex flex-col bg-gray aspect-[2/3] border-2 border-navy rounded-[32px] overflow-clip`}>
-            <div className="front" onClick={() => setFlip(!flip)}>
+          <div className={`card ${flip ? "flip" : ""} relative flex flex-col bg-gray aspect-[2/3] border-2 border-navy rounded-[32px] overflow-clip shadow-xl`}>
+            <div className="front bg-gray" onClick={() => setFlip(!flip)}>
             {/* upper decoration */}
               <div className="flex flex-row gap-2 py-2">
                 <SparklesIcon className="size-12 text-navy"></SparklesIcon>
@@ -39,7 +39,7 @@ export default function Work() {
             {/* title */}
               <div className="text-navy text-2xl text-fraunces px-4 pb-4 self-start">PageByPage</div>
             {/* image */}
-              <div className="flex flex-col relative h-[40%] w-full mx-4 border-2 border-navy rounded-lg self-center">
+              <div className="flex flex-col relative w-full aspect-[3/2] border-2 border-navy rounded-lg self-center">
                 <Image className="rounded-lg" src="/project-6.png" fill={true}></Image>
                 {/* icon */}
                 <div className="absolute flex w-1/4 h-1/3 rounded-full border-2 border-b-navy border-r-navy bg-gray ml-[-4%] mt-[-4%] place-content-center">
@@ -78,7 +78,7 @@ export default function Work() {
               blah blah blah a redesign of GoodReads but shhhh we dont want them to know that we secretly call it BetterReads
               </div>
             </div>
-            <div className="back" onClick={() => setFlip(!flip)}>
+            <div className="back flex flex-col bg-gray" onClick={() => setFlip(!flip)}>
               {/* upper decoration */}
               <div className="flex flex-row gap-2 py-2">
                 <SparklesIcon className="size-12 text-navy"></SparklesIcon>
@@ -91,7 +91,11 @@ export default function Work() {
             
 
               {/* short desc */}
-              <div className="h-2/3 mx-4 mb-4 p-2 border-2 border-navy rounded-lg text-navy">
+              <div className="h-2/3 mx-4 mb-4 p-2 border-2 border-navy rounded-[24px] text-navy text-balance overscroll-auto">
+              blah blah blah a redesign of GoodReads but shhhh we dont want them to know that we secretly call it BetterReads
+              blah blah blah a redesign of GoodReads but shhhh we dont want them to know that we secretly call it BetterReads
+              blah blah blah a redesign of GoodReads but shhhh we dont want them to know that we secretly call it BetterReads
+              blah blah blah a redesign of GoodReads but shhhh we dont want them to know that we secretly call it BetterReads
               blah blah blah a redesign of GoodReads but shhhh we dont want them to know that we secretly call it BetterReads
               </div>
 

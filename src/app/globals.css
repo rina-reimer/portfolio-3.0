@@ -34,7 +34,8 @@ body {
 
 .card {
   transform-style: preserve-3d;
-  transition: 150ms;
+  -webkit-transform-style: preserve-3d; 
+  transition: 600ms ease-in-out;
   transform: perspective(1000px) rotateY(var(--rotate-y, 0))
    translateY(var(--translate-y, 0));
 }
@@ -45,18 +46,31 @@ body {
 
 .card.flip {
   --rotate-y: 180deg;
+  --rotate-back-y: 0;
 }
 
-.card.front {
-  left: 0;
+.card.flip > .front {
+  transition-delay: 300ms;
+  opacity: 0;
+}
+
+.card.flip > .back {
+  transition-delay: 300ms;
+  opacity: 1;
 }
 
 .card .front, 
 .card .back {
   position: absolute;
-  backface-visibility: hidden;
+}
+
+.card .front {
+  transition-delay: 300ms;
+  opacity: 1;
 }
 
 .card .back {
-  transform: rotateY(180deg);
+  transition-delay: 300ms;
+  opacity: 0;
+  rotate: y 180deg;
 }
