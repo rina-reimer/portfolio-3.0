@@ -18,12 +18,8 @@
 
 body {
   color: theme('colors.gray');
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      theme('colors.beige')
-    );
-    width: 100vw;
+  background: theme('colors.beige');
+  width: 100vw;
 }
 
 @layer utilities {
@@ -41,7 +37,7 @@ body {
 }
 
 .card:hover {
-  --translate-y: -2px;
+  --translate-y: -10px;
 }
 
 .card.flip {
