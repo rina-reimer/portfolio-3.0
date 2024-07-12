@@ -17,7 +17,7 @@
 }
 
 body {
-  color: theme('colors.gray');
+  color: theme('colors.navy');
   background: theme('colors.beige');
   width: 100vw;
 }
@@ -69,4 +69,139 @@ body {
   transition-delay: 300ms;
   opacity: 0;
   rotate: y 180deg;
+}
+
+/* INVERTED RADIUS BUTTON */
+.box1 {
+  background: transparent;
+  height: 4em;
+  width: 10em;
+  position: relative;
+  overflow: hidden;
+  z-index: 1000;
+}
+.box1:before {
+  content: "";
+  display: block;
+  background: theme('colors.beige');
+  position: absolute;
+  top: -12px;
+  left: -12px;
+  width: 24px;
+  height: 24px;
+  border-radius: 100%;
+  z-index: 1000;
+}
+.box1:after{
+  content: "";
+  display: block;
+  background: theme('colors.beige');
+  position: absolute;
+  top: -12px;
+  right: -12px;
+  width: 24px;
+  height: 24px;
+  border-radius: 100%;
+  z-index: 1000;
+}
+.box1 .box2:before {
+  content: "";
+  display: block;
+  background: theme('colors.beige');
+  position: absolute;
+  bottom: -12px;
+  left: -12px;
+  width: 24px;
+  height: 24px;
+  border-radius: 100%;
+  z-index: 1000;
+}
+.box1 .box2:after{
+  content: "";
+  display: block;
+  background: theme('colors.beige');
+  position: absolute;
+  bottom: -12px;
+  right: -12px;
+  width: 24px;
+  height: 24px;
+  border-radius: 100%;
+  z-index: 1000;
+}
+.box3 {
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 6px;
+  padding: 0em;
+  position: absolute;
+  overflow: hidden;
+  z-index: 100;
+}
+.box4 {
+  border: 3px solid theme('colors.navy');
+  background: theme('colors.gray');
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: absolute;
+  z-index: 100;
+}
+.box4:before {
+  content: "";
+  display: block;
+  border: 3px solid theme('colors.navy');
+  background: theme('colors.beige');
+  position: absolute;
+  top: -24px;
+  left: -24px;
+  width: 36px;
+  height: 36px;
+  border-radius: 100%;
+  z-index: 100;
+}
+.box4:after{
+  content: "";
+  display: block;
+  border: 3px solid theme('colors.navy');
+  background: theme('colors.beige');
+  position: absolute;
+  top: -24px;
+  right: -24px;
+  width: 36px;
+  height: 36px;
+  border-radius: 100%;
+  z-index: 100;
+}
+.box4 .box5:before {
+  content: "";
+  display: block;
+  border: 3px solid theme('colors.navy');
+  background: theme('colors.beige');
+  position: absolute;
+  bottom: -24px;
+  left: -24px;
+  width: 36px;
+  height: 36px;
+  border-radius: 100%;
+  z-index: 100;
+}
+.box4 .box5:after{
+  content: "";
+  display: block;
+  border: 3px solid theme('colors.navy');
+  background: theme('colors.beige');
+  position: absolute;
+  bottom: -24px;
+  right: -24px;
+  width: 36px;
+  height: 36px;
+  border-radius: 100%;
+  z-index: 100;
+}
+.box1 span {
+  color: theme('colors.navy');
+  padding: 1em;
 }

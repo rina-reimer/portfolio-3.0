@@ -1,7 +1,9 @@
 "use client"
 import Image from "next/image";
 import { HomeIcon, IdentificationIcon, ArchiveBoxIcon } from "@heroicons/react/24/solid";
-import Link from 'next/link'
+import CoolButton from "./components/CoolButton";
+import Link from 'next/link';
+import data from '/src/lib/en.json';
 
 export default function Home() {
   return (
@@ -15,14 +17,22 @@ export default function Home() {
         </div>
       </div>
       
-      <div className="flex flex-col w-full  space-y-10">
+      <div className="flex flex-col w-full lg:pt-0 pt-36 space-y-10">
         {/* Hero Section */}
         <div className="flex flex-row lg:w-5/6 w:full h-dvh lg:ml-36 lg:place-items-center">
-          <div className="w-1/3 h-96 bg-navy self-center justify-self-center border-navy border-4 px-8">
-            <h1>Photo</h1>
+          {/* profile image or 3d model */}
+          <div className="relative w-1/3 aspect-square self-center justify-self-center px-8">
+            <Image src={"/memoji.png"} fill={true}></Image>
           </div>
-          <div className="grid w-2/3 place-items-center">
-            <h1 className="text-navy">Hero Section</h1>
+          {/* hero text */}
+          <div className="flex flex-col space-y-6 w-2/3 place-content-center">
+            <div className="text-4xl text-navy pb-4">{data.hero}</div>
+            <div className="text-navy">{data.abt1}</div>
+            {/* start and resume button */}
+            <div className="grid grid-cols-2 items-center space-x-8">
+              <CoolButton text={"START"} link={"/resume.pdf"} />
+              <CoolButton text={"RESUMÉ"} link={"/resume.pdf"} />
+            </div>
           </div>
         </div>
 
