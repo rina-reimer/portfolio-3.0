@@ -1,5 +1,6 @@
 import { Space_Mono } from "next/font/google";
 import { Fraunces } from "next/font/google";
+import Nav from "./components/Navbar";
 import "./globals.css";
 
 const space = Space_Mono({ subsets: ["latin"], weight: ["700"] });
@@ -13,7 +14,9 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={space.className}>
+        <Nav />
         {children}
+        {/* insert footer here */}
       </body>
     </html>
   );

@@ -1,5 +1,6 @@
 import Image from "next/image";
 import {Divider} from "@nextui-org/divider";
+import {Tooltip} from "@nextui-org/react";
 import { useState } from "react";
 import data from '/src/lib/en.json';
 import { SparklesIcon, BookOpenIcon } from "@heroicons/react/24/solid";
@@ -28,7 +29,7 @@ const ProjectCard = ({ projectNum }) => {
         <div className="flex flex-col relative w-[368px] mx-4 aspect-[3/2] border-2 border-navy rounded-[24px] self-center">
           <Image className="rounded-[24px]" src={`/project-${projectNum}.png`} fill={true} sizes=""></Image>
           {/* icon */}
-          <div className="absolute flex w-1/4 h-1/3 rounded-full border-2 border-b-navy border-r-navy bg-gray ml-[-4%] mt-[-4%] place-content-center">
+          <div className="absolute flex w-1/4 h-1/3 rounded-full border-2 border-gray border-b-navy border-r-navy bg-gray ml-[-4%] mt-[-4%] place-content-center">
             <BookOpenIcon className="text-navy size-1/2 self-center py-1/4"></BookOpenIcon>
           </div>
           {/* status */}
@@ -46,9 +47,11 @@ const ProjectCard = ({ projectNum }) => {
           <div className="flex flex-row -space-x-4">
             {data[`project${projectNum}`]?.stack.map((item, index) => {
               return (
-                <div key={index} className="flex relative h-full aspect-square bg-gray border-2 border-navy z-10 hover:z-20 rounded-full">
-                  <Image src={`https://img.icons8.com/color/50/${item}.png`} fill={true}></Image>
-                </div>
+                <Tooltip className="bg-navy text-gray p-2 rounded-full" content={`${data[`project${projectNum}`].stack[index]}`}>
+                  <div key={index} className="flex relative h-full aspect-square bg-gray border-2 border-navy z-10 hover:z-20 rounded-full">
+                    <Image src={`https://img.icons8.com/color/50/${item}.png`} fill={true}></Image>
+                  </div>
+                </Tooltip>
               );
             })}
           </div>

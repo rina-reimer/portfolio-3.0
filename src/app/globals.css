@@ -71,137 +71,36 @@ body {
   rotate: y 180deg;
 }
 
-/* INVERTED RADIUS BUTTON */
+/* INVERTED RADIUS BUTTON 
+creds: https://blog.logrocket.com/create-fancy-corners-css/#:~:text=use%20SVG.-,4.%20Inverted%20corners,-You%20can%20use */
+.box1, .box2 {
+  display: flex;
+  overflow: hidden;
+  z-index: 200;
+}
 .box1 {
-  background: transparent;
   height: 4em;
   width: 10em;
-  position: relative;
-  overflow: hidden;
-  z-index: 1000;
+  mask: radial-gradient(20px at 40px 40px, transparent 98%, black) -40px -40px;
+
 }
-.box1:before {
-  content: "";
-  display: block;
-  background: theme('colors.beige');
-  position: absolute;
-  top: -12px;
-  left: -12px;
-  width: 24px;
-  height: 24px;
-  border-radius: 100%;
-  z-index: 1000;
-}
-.box1:after{
-  content: "";
-  display: block;
-  background: theme('colors.beige');
-  position: absolute;
-  top: -12px;
-  right: -12px;
-  width: 24px;
-  height: 24px;
-  border-radius: 100%;
-  z-index: 1000;
-}
-.box1 .box2:before {
-  content: "";
-  display: block;
-  background: theme('colors.beige');
-  position: absolute;
-  bottom: -12px;
-  left: -12px;
-  width: 24px;
-  height: 24px;
-  border-radius: 100%;
-  z-index: 1000;
-}
-.box1 .box2:after{
-  content: "";
-  display: block;
-  background: theme('colors.beige');
-  position: absolute;
-  bottom: -12px;
-  right: -12px;
-  width: 24px;
-  height: 24px;
-  border-radius: 100%;
-  z-index: 1000;
-}
-.box3 {
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin: 6px;
-  padding: 0em;
-  position: absolute;
-  overflow: hidden;
-  z-index: 100;
-}
-.box4 {
-  border: 3px solid theme('colors.navy');
-  background: theme('colors.gray');
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  position: absolute;
-  z-index: 100;
-}
-.box4:before {
-  content: "";
-  display: block;
-  border: 3px solid theme('colors.navy');
-  background: theme('colors.beige');
-  position: absolute;
-  top: -24px;
-  left: -24px;
-  width: 36px;
-  height: 36px;
-  border-radius: 100%;
-  z-index: 100;
-}
-.box4:after{
-  content: "";
-  display: block;
-  border: 3px solid theme('colors.navy');
-  background: theme('colors.beige');
-  position: absolute;
-  top: -24px;
-  right: -24px;
-  width: 36px;
-  height: 36px;
-  border-radius: 100%;
-  z-index: 100;
-}
-.box4 .box5:before {
-  content: "";
-  display: block;
-  border: 3px solid theme('colors.navy');
-  background: theme('colors.beige');
-  position: absolute;
-  bottom: -24px;
-  left: -24px;
-  width: 36px;
-  height: 36px;
-  border-radius: 100%;
-  z-index: 100;
-}
-.box4 .box5:after{
-  content: "";
-  display: block;
-  border: 3px solid theme('colors.navy');
-  background: theme('colors.beige');
-  position: absolute;
-  bottom: -24px;
-  right: -24px;
-  width: 36px;
-  height: 36px;
-  border-radius: 100%;
-  z-index: 100;
+.box2 {
+  height: 4em;
+  width: 14em;
+  mask: radial-gradient(20px at 40px 40px, transparent 98%, black) -40px -40px;
+  transform: scale(0.9);
 }
 .box1 span {
   color: theme('colors.navy');
   padding: 1em;
+}
+
+/* CHECKERED creds: https://codepen.io/lloeki/pen/bGpRzb */
+.checkered {
+  background-color: transparent;
+  background-size: 50px 50px;
+  background-position: 0 0, 25px 25px;
+  background-image: linear-gradient(45deg, theme('colors.pink') 25%, transparent 25%, transparent 75%, theme('colors.pink') 75%, theme('colors.pink')),
+                    linear-gradient(45deg, theme('colors.pink') 25%, transparent 25%, transparent 75%, theme('colors.pink') 75%, theme('colors.pink'));
+  
 }
