@@ -4,6 +4,8 @@
     "projects": "work",
     "academics": "courses",
     "resume": "resume ↗",
+    "selftags1": ["Full-Stack Development", "Mobile App Development"],
+    "selftags2": ["Front-End Development", "Web Development", "Database Management"],
     "name": "Rina Reimer",
     "hero": "Hey there! I'm Rina Reimer",
     "current-school": "ACMS at <a href='https://acms.washington.edu/' target='blank' rel='noopener noreferrer'>UW ↗</a>",

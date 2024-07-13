@@ -4,6 +4,7 @@ import { HomeIcon, IdentificationIcon, ArchiveBoxIcon } from "@heroicons/react/2
 import CoolButton from "./components/CoolButton.jsx";
 import Banner from "./components/Banner";
 import data from '/src/lib/en.json';
+import CrossBanner from "./components/CrossBanner.jsx";
 
 export default function Home() {
   return (
@@ -21,20 +22,18 @@ export default function Home() {
             <div className="text-4xl text-navy pb-4">{data.hero}</div>
             <div className="text-navy">{data.abt1}</div>
             {/* start and resume button */}
-            <div className="grid grid-cols-2 items-center space-x-8">
-              <CoolButton text={"START"} link={"/resume.pdf"} />
+            <div className="grid grid-cols-2 justify-between w-full">
+              <CoolButton text={"START"} link={"#about-section"} />
               <CoolButton text={"RESUMÉ"} link={"/resume.pdf"} />
             </div>
           </div>
         </div>
 
         {/* what i do banner */}
-        <div className="grid bg-gray w-lvw h-32 place-items-center border-navy border-y-4">
-          <h1 className="px-60 text-navy">what i do banners</h1>
-        </div>
+        <CrossBanner banner1={data.selftags1} banner2={data.selftags2}> </CrossBanner>
 
         {/* Short About Section */}
-        <div className="bg-yellow w-2/3 h-[600px] py-0.5 ml-24 self-center justify-self-center border-navy border-4 px-8">
+        <div id="about-section" className="bg-yellow w-2/3 h-[600px] py-12 ml-24 my-12 self-center justify-self-center border-navy border-4 px-8">
           <h1 className="text-navy">a lil bit about me</h1>
         </div>
 
