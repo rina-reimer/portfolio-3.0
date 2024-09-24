@@ -1,5 +1,4 @@
 // creds: https://www.joshwcomeau.com/snippets/react-hooks/use-mouse-position/
-
 import React from 'react';
 const useMousePosition = () => {
   const [
@@ -17,5 +16,4 @@ const useMousePosition = () => {
   }, []);
   return mousePosition;
 };
-
 export default useMousePosition;

@@ -1,10 +1,11 @@
 "use client"
 import Image from "next/image";
 import data from '/src/lib/en.json';
-import { Animation } from "./components/Animation";
+import Animation from "./components/Animation";
 import { CoolButton } from "./components/CoolButton";
 import Banner from "./components/Banner";
 import { CrossBanner } from "./components/CrossBanner";
+import AutoplayCarousel from "./components/AutoplayCarousel";
 import Journal from "./components/Journal";
 
 export default function Home() {
@@ -16,7 +17,7 @@ export default function Home() {
         <div className="flex flex-row lg:w-5/6 w:full lg:h-dvh h-lvh lg:ml-36 lg:place-items-center">
           {/* profile image or 3d model */}
           <div className="relative w-1/3 aspect-square self-center justify-self-center px-8">
-            {/* <Animation /> */}
+            <Animation />
           </div>
           {/* hero text */}
           <div className="flex flex-col space-y-6 w-2/3 place-content-center">
@@ -24,13 +25,14 @@ export default function Home() {
             <div className="text-navy">{data.abt1}</div>
             {/* start and resume button */}
             <div className="grid grid-cols-2 justify-between w-full">
-              {/* <CoolButton text={"START"} link={"#about-section"} />
-              <CoolButton text={"RESUMÉ"} link={"/resume.pdf"} /> */}
+              <CoolButton text={"START"} link={"#about-section"} />
+              <CoolButton text={"RESUMÉ"} link={"/resume.pdf"} />
             </div>
           </div>
         </div>
 
         {/* what i do banner */}
+        <AutoplayCarousel />
         {/* <CrossBanner banner1={data.selftags1} banner2={data.selftags2}> </CrossBanner> */}
 
         {/* Short About Section */}
