@@ -1,5 +1,4 @@
 import { Space_Mono } from "next/font/google";
-import { Fraunces } from "next/font/google";
 import Nav from "./components/Navbar";
 import "./globals.css";
 

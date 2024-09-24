@@ -80,13 +80,13 @@ creds: https://blog.logrocket.com/create-fancy-corners-css/#:~:text=use%20SVG.-,
 }
 .box1 {
   height: 4em;
-  width: 10em;
+  width: 15em;
   mask: radial-gradient(20px at 40px 40px, transparent 98%, black) -40px -40px;
 
 }
 .box2 {
-  height: 4em;
-  width: 14em;
+  height: 2.7em;
+  width: 25em;
   mask: radial-gradient(20px at 40px 40px, transparent 98%, black) -40px -40px;
   transform: scale(0.9);
 }
@@ -104,3 +104,5 @@ creds: https://blog.logrocket.com/create-fancy-corners-css/#:~:text=use%20SVG.-,
                     linear-gradient(45deg, theme('colors.pink') 25%, transparent 25%, transparent 75%, theme('colors.pink') 75%, theme('colors.pink'));
   
 }
+
+/* Infinite Autoplay Carousel creds: */
