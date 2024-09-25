@@ -10,7 +10,7 @@ export default function Work() {
     <main className="flex flex-row bg-beige min-h-screen">
       
       <div className="flex flex-col lg:w-5/6 lg:ml-36 w-full space-y-10">
-        <div className="grid grid-row h-1/4 lg:ml-36 lg:place-items-center">
+        <div className="grid grid-row h-1/2 lg:ml-36 lg:place-items-center">
           <h1 className="text-navy whitespace-nowrap lg:mt-0 mt-36">fun heading</h1>
         </div>
         <Divider className="text-navy w-full place-self-center "></Divider>

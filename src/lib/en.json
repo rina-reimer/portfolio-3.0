@@ -21,7 +21,7 @@
     "frameworks": "Frameworks",
     "etc": "Other",
     "greeting": "Hey there!",
-    "abt1": "I’m Rina Reimer, a software developer based in Seattle, WA. I’m currently studying math and computer science at the University of Washington. Thanks for stopping by! Be sure to check out my projects and more.",
+    "abt1": "I'm Rina Reimer, a software developer based in Seattle, WA. I'm currently studying math and computer science at the University of Washington. Thanks for stopping by! Be sure to check out my projects and more.",
     "abt2": "I'm a second-year student, studying mathematics and how it relates to program efficiency. I love coding and designing programs.",
     "abt3": "I am currently a student at the University of Washington, studying Applied and Computational Mathematical Sciences, which is a mixture of mathematics and computer science and how they relate to each other.<br>I have challenged myself by taking difficult classes since being enrolled at UW. I have years of experience collaborating and explaining my ideas from tutoring and volunteering.<br>I am a software developer expanding my expertise in full-stack development  through numerous personal projects. I’m always looking for opportunities to collaborate and expand my knowledge of software development.",
     "contact": "Get in Touch!",
@@ -35,7 +35,8 @@
         "desc": "Java object-oriented program utilizing Dijkstra's graph algorithm to find the path of pixels with the least energy within an image.",
         "longdesc": "+ Java object-oriented program utilizing Dijkstra's graph algorithm to find the path of pixels with the least energy within an image.<br>+ 3-week long development stage, building upon CSE 373 curriculum.",
         "type": "Class Group Project",
-        "role": "Main Developer"
+        "role": "Main Developer",
+        "url": ""
     },
     "project2": {
         "title": "Electrical Circuit Calculator",
@@ -44,7 +45,8 @@
         "desc": "Python program that calculates voltages at nodes and current along connections in a given electrical circuit.",
         "longdesc": "+ Python program that calculates voltages at nodes and current along connections in a given electrical circuit.<br>+ Demonstrates linear algebra expertise  with Markdown explanations.",
         "type": "Class Project",
-        "role": "Project Creator"
+        "role": "Project Creator",
+        "url": "https://github.com/rina-reimer/electrical-circuit-calculator"
     },
     "project3": {
         "title": "BYJU's Capstones",
@@ -54,7 +56,8 @@
         "desc": "A collection of my Python capstone projects from BYJU's FutureSchool.",
         "longdesc": "+ Excelled in weekly online Python training program, learning machine learning and data modeling techniques. <br>+ Mastered data cleaning/visualization and statistical representation techniques through over 100 hands-on data analysis projects with large data sets from various international sources. <br>+ Gained coding experience and deepened knowledge of machine learning models, such as Linear/Logistic Regression, Random Forest Classifier, and Fast Fourier Transformations.",
         "type": "Class Capstone Projects",
-        "role": "Project Creator"
+        "role": "Project Creator",
+        "url": "https://github.com/rina-reimer/byjus-capstones"
     },
     "project4": {
         "title": "Bit Connect",
@@ -64,7 +67,8 @@
         "longdesc": "+ Java application aimed to connect students in person using hypothetical location data and filtered matches between users based on fields of study and interests. <br>+ Teamed with fellow students using Figma, starting the project in WINFO Hackathon 2024 and continuing the implementation with help from industry professionals and self-learning.<br>+ 9-hour initial build with algorithm architecture draft and three-month deliverable design implementation, utilizing Gradle and the JVM to release documentation on the prototype.",
         "tags": "hackathon | app development | algorithms | Java",
         "type": "Prototype",
-        "role": "Backend Developer"
+        "role": "Backend Developer",
+        "url": "https://github.com/rina-reimer/bit-connect"
     },
     "project5": {
         "title": "PeakMind",
@@ -74,7 +78,8 @@
         "longdesc": "+ Worked on a team to create a gamified mental health app aimed at giving users accessible and friendly resources, using artificial intelligence and natural language processing to offer personalized recommendations.<br>+ Worked on the front end to convert designs to useable interfaces, quickly picking up SwiftUI and app development.<br>+ Honed communication skills and time management, working on a team of 7 to deliver on a fast-paced software development cycle, earning top spots in various app design competitions.<br>+ Spearheaded a feature to track users’ mental health data to give users custom plans using machine learning to analyze the large data set and use various psychology sources to give accurate feedback.",
         "tags": "app development | UI/UX | SwiftUI",
         "type": "iOS App",
-        "role": "Fullstack Developer"
+        "role": "Fullstack Developer",
+        "url": "https://www.peaksmind.com/"
     },
     "project6": {
         "title": "PageByPage",
@@ -84,21 +89,43 @@
         "longdesc": "TODO: + Collaborated on a cross-functional team to develop a website presenting a new tabletop role-playing game.<br>+ Utilized data ingestion and querying to process user data and Google Cloud to deploy the application, while also creating a REST API to allow users interactive access to created characters and game materials.<br>+ Enhanced proficiency in UI and web development through completing 100+ hours of online courses and hands-on projects, resulting in successfully implementing interactive design elements.<br>+ Applied open-source game engines to allow users access to gameplay within the application.",
         "tags": "app development | frontend | Swift",
         "type": "iOS App",
-        "role": "Fullstack Developer"
+        "role": "Fullstack Developer",
+        "url": ""
     },
-    "cse414-title": "CSE 414 <br>Introduction to Database Systems",
-    "cse414-desc": "Data models, query languages, transactions, database tuning, data warehousing, and parallelism.",
-    "cse413-title": "CSE 413 <br>Programming Languages and Implementation",
-    "cse413-desc": "Concepts/implementation strategies for programming languages; analysis of computer science and computer engineering performance.",
-    "cse373-title": "CSE 373 <br>Data Structures and Algorithms",
-    "cse373-desc": "Hash tables, priority queues, graphs, balanced trees, asymptotic analysis, and graph algorithms.",
-    "cse374-title": "CSE 374 <br>Intermediate Programming Concepts and Tools",
-    "cse374-desc": "Lower-level programming and explicit memory management; use of Linux systems for compilation; software development techniques and tools including documentation and code review.",
-    "amath352-title": "AMATH 352 <br>Applied Linear Algebra",                  
-    "amath352-desc": "LU factorization, QR factorization, eigenvalues and eigenvectors, and singular value decomposition, implemented with Python.",
-    "cse123-title": "CSE 123 <br>Introduction to Computer Programming III",
-    "cse123-desc": "Recursion, inheritance, and reference semantics.",
-    "stat390-title": "STAT 390 <br>Statistical Methods in Engineering and Science",
-    "stat390-desc": "Exploratory data analysis and interactive computing using statistical methods in R.",
+    "class1": {
+        "title": "STAT 390: Statistical Methods in Engineering and Science",
+        "stack": ["r"],
+        "desc": "Exploratory data analysis and interactive computing using statistical methods in R."
+    },
+    "class2": {
+        "title": "CSE 123: Introduction to Computer Programming III",
+        "stack": ["java-coffee-cup-logo--v1"],
+        "desc": "Recursion, inheritance, and reference semantics."
+    },
+    "class3": {
+        "title": "AMATH 352: Applied Linear Algebra",
+        "stack": ["python"],
+        "desc": "LU factorization, QR factorization, eigenvalues and eigenvectors, and singular value decomposition, implemented with Python."
+    },
+    "class4": {
+        "title": "CSE 374: Intermediate Programming Concepts and Tools",
+        "stack": ["c", "c-plus-plus-logo", "linux"], 
+        "desc": "Lower-level programming and explicit memory management; use of Linux systems for compilation; software development techniques and tools including documentation and code review."
+    },
+    "class5": {
+        "title": "CSE 373: Data Structures and Algorithms",
+        "stack": ["java-coffee-cup-logo--v1", "git"], 
+        "desc": "Hash tables, priority queues, graphs, balanced trees, asymptotic analysis, and graph algorithms."
+    },
+    "class6": {
+        "title": "CSE 413: Programming Languages and Implementation",
+        "stack": ["ruby"], 
+        "desc": "Concepts/implementation strategies for programming languages; analysis of computer science and computer engineering performance."
+    },
+    "class7": {
+        "title": "CSE 414: Introduction to Database Systems",
+        "stack": ["sql"], 
+        "desc": "Data models, query languages, transactions, database tuning, data warehousing, and parallelism."
+    },
     "footer-desc": "always looking for opportunities :)"
 }
