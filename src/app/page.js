@@ -17,7 +17,7 @@ export default function Home() {
         <div className="flex flex-row lg:w-5/6 w:full lg:h-dvh h-lvh lg:ml-36 lg:place-items-center">
           {/* profile image or 3d model */}
           <div className="relative w-1/3 aspect-square self-center justify-self-center px-8">
-            {/* <Animation /> */}
+            <Animation />
           </div>
           {/* hero text */}
           <div className="flex flex-col space-y-6 w-2/3 place-content-center">
@@ -49,8 +49,8 @@ export default function Home() {
         <Banner text={"featured courses"} />
 
         {/* featured projects  */}
-        <div className="w-full lg:w-2/3 py-10 space-y-10">
-          <div className="grid grid-cols-3 gap-16 lg:ml-24 ">
+        <div className="w-full lg:pl-40 px-8 py-10 space-y-10 justify-end">
+          <div className="grid lg:grid-cols-3 grid-cols-2 gap-16">
           {[1, 2, 3, 4, 5, 6, 7].map((item) => {
               return (
                 <CourseCard classNum={item}></CourseCard>
