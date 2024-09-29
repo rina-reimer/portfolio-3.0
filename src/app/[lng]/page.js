@@ -1,14 +1,17 @@
 "use client"
+import { useEffect } from "react";
 import Image from "next/image";
-import data from '/src/lib/en.json';
 import Animation from "./components/Animation";
-import { CoolButton } from "./components/CoolButton";
+import {CoolButton} from "./components/CoolButton";
 import Banner from "./components/Banner";
 import AutoplayCarousel from "./components/AutoplayCarousel";
 import CourseCard from "./components/CourseCard";
 import FeaturedProject from "./components/FeaturedProject";
+import { useTranslation } from '../i18n/client.js';
 
-export default function Home() {
+export default function Home({ params: { lng } }) {
+  const { t } = useTranslation(lng, 'common')
+
   return (
     <main className="bg-beige flex flex-row min-h-screen">
       
@@ -16,23 +19,24 @@ export default function Home() {
         {/* Hero Section */}
         <div className="flex flex-row lg:w-5/6 w:full lg:h-dvh h-lvh lg:ml-36 lg:place-items-center">
           {/* profile image or 3d model */}
-          <div className="relative w-1/3 aspect-square self-center justify-self-center px-8">
+          <div className="relative md:w-1/3 w-0 aspect-square self-center justify-self-center px-8">
             <Animation />
           </div>
           {/* hero text */}
-          <div className="flex flex-col space-y-6 w-2/3 place-content-center">
-            <div className="text-4xl text-purple pb-4">{data.hero}</div>
-            <div className="text-navy pb-8">{data.abt1}</div>
+          <div className="flex flex-col space-y-2 md:w-2/3 w-full place-content-center">
+            <div className="text-navy py-2">{t('hero')}</div>
+            <div className="text-[5em] text-purple font-playfair font-extrabold">{t('name')}</div>
+            <div className="text-navy pb-8">{t('abt1')}</div>
             {/* start and resume button */}
             <div className="grid grid-cols-2 justify-between w-full">
-              <CoolButton text={"START"} link={"#about-section"} />
-              <CoolButton text={"RESUMÉ"} link={"/resume.pdf"} />
+              <CoolButton text={t('start').toUpperCase()} link={"#about-section"} />
+              <CoolButton text={t('resume').toUpperCase()} link={"/resume.pdf"} />
             </div>
           </div>
         </div>
 
         {/* what i do banner */}
-        <AutoplayCarousel />
+        <AutoplayCarousel contents={t('selftags', { returnObjects: true })} />
 
         {/* featured projects banner */}
         <Banner text={"featured projects"} />
@@ -40,8 +44,8 @@ export default function Home() {
         {/* featured projects  */}
         <div className="bg-pink grid grid-col w-full py-10 space-y-10 -pt-10 items-center">
           <div className="grid lg:ml-32 lg:w-5/6">
-            <FeaturedProject projectNum={6}> </FeaturedProject>
-            <FeaturedProject projectNum={5}> </FeaturedProject>
+            <FeaturedProject projectNum={6} lng={lng}> </FeaturedProject>
+            <FeaturedProject projectNum={5} lng={lng}> </FeaturedProject>
           </div>
         </div>
 

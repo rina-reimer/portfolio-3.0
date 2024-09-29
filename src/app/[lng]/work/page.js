@@ -1,10 +1,11 @@
 "use client"
 import Link from 'next/link'
 import {Divider} from "@nextui-org/divider";
-import data from '/src/lib/en.json';
 import ProjectCard from "../components/ProjectCard.jsx";
+import { useTranslation } from '@/app/i18n/client.js';
 
-export default function Work() {
+export default function Work({lng}) {
+  const {t} = useTranslation(lng, 'common');
 
   return (
     <main className="flex flex-row bg-beige min-h-screen">
@@ -17,12 +18,11 @@ export default function Work() {
 
         {/* Projects */}
         <div className="card-grid grid md:grid-cols-2 grid-cols-1 gap-12 justify-items-center">
-          <ProjectCard name={[data.name]} projectNum={[6]} />
-          <ProjectCard name={[data.name]} projectNum={[5]} />
-          <ProjectCard name={[data.name]} projectNum={[4]} />
-          <ProjectCard name={[data.name]} projectNum={[3]} />
-          <ProjectCard name={[data.name]} projectNum={[2]} />
-          <ProjectCard name={[data.name]} projectNum={[1]} />
+          {[6, 5, 4, 3, 2, 1].map((item) => {
+              return (
+                <ProjectCard name={t('name')} lng={lng} projectNum={[item]} />
+              );
+            })}
         </div>
 
       </div>

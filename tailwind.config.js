@@ -1,5 +1,6 @@
 const defaultTheme = require('tailwindcss/defaultTheme');
 const {nextui} = require('@nextui-org/theme');
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
@@ -23,7 +24,8 @@ module.exports = {
         'project6': "url('/public/project-6.png')",
       },
       fontFamily: {
-        fraunces: ['"Fraunces"', ...defaultTheme.fontFamily.sans]
+        fraunces: ['Fraunces', "serif"],
+        playfair: ['Playfair_Display', "serif"]
       }
     },
     colors: {

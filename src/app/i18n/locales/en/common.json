@@ -1,12 +1,14 @@
 {
+    "languageSwitcher": "Switch from <1>{{lng}}</1> to: ",
     "home": "home",
     "about": "about",
     "projects": "work",
     "academics": "courses",
     "resume": "resume ↗",
+    "start": "start",
     "selftags": ["Full-Stack Development", "Mobile App Development", "Front-End Development", "Web Development", "Database Management"],
     "name": "Rina Reimer",
-    "hero": "Hey there! I'm Rina Reimer",
+    "hero": "Hey there! My name is",
     "current-school": "ACMS at <a href='https://acms.washington.edu/' target='blank' rel='noopener noreferrer'>UW ↗</a>",
     "current-job": "Full Stack Developer at <a href='www.peaksmind.com' target='blank' rel='noopener noreferrer'>PeakMind ↗</a>",
     "school": "<b>School: </b>",
@@ -21,7 +23,7 @@
     "frameworks": "Frameworks",
     "etc": "Other",
     "greeting": "Hey there!",
-    "abt1": "I'm Rina Reimer, a software developer based in Seattle, WA. I'm currently studying math and computer science at the University of Washington. Thanks for stopping by! Be sure to check out my projects and more.",
+    "abt1": "I'm a software developer based in Seattle, WA. I'm currently studying math and computer science at the University of Washington. Thanks for stopping by! Be sure to check out my projects and more.",
     "abt2": "I'm a second-year student, studying mathematics and how it relates to program efficiency. I love coding and designing programs.",
     "abt3": "I am currently a student at the University of Washington, studying Applied and Computational Mathematical Sciences, which is a mixture of mathematics and computer science and how they relate to each other.<br>I have challenged myself by taking difficult classes since being enrolled at UW. I have years of experience collaborating and explaining my ideas from tutoring and volunteering.<br>I am a software developer expanding my expertise in full-stack development  through numerous personal projects. I’m always looking for opportunities to collaborate and expand my knowledge of software development.",
     "contact": "Get in Touch!",
@@ -35,8 +37,7 @@
         "desc": "Java object-oriented program utilizing Dijkstra's graph algorithm to find the path of pixels with the least energy within an image.",
         "longdesc": "+ Java object-oriented program utilizing Dijkstra's graph algorithm to find the path of pixels with the least energy within an image.<br>+ 3-week long development stage, building upon CSE 373 curriculum.",
         "type": "Class Group Project",
-        "role": "Main Developer",
-        "url": ""
+        "role": "Main Developer"
     },
     "project2": {
         "title": "Electrical Circuit Calculator",
@@ -46,7 +47,7 @@
         "longdesc": "+ Python program that calculates voltages at nodes and current along connections in a given electrical circuit.<br>+ Demonstrates linear algebra expertise  with Markdown explanations.",
         "type": "Class Project",
         "role": "Project Creator",
-        "url": "https://github.com/rina-reimer/electrical-circuit-calculator"
+        "github": "https://github.com/rina-reimer/electrical-circuit-calculator"
     },
     "project3": {
         "title": "BYJU's Capstones",
@@ -57,7 +58,7 @@
         "longdesc": "+ Excelled in weekly online Python training program, learning machine learning and data modeling techniques. <br>+ Mastered data cleaning/visualization and statistical representation techniques through over 100 hands-on data analysis projects with large data sets from various international sources. <br>+ Gained coding experience and deepened knowledge of machine learning models, such as Linear/Logistic Regression, Random Forest Classifier, and Fast Fourier Transformations.",
         "type": "Class Capstone Projects",
         "role": "Project Creator",
-        "url": "https://github.com/rina-reimer/byjus-capstones"
+        "github": "https://github.com/rina-reimer/byjus-capstones"
     },
     "project4": {
         "title": "Bit Connect",
@@ -68,7 +69,7 @@
         "tags": "hackathon | app development | algorithms | Java",
         "type": "Prototype",
         "role": "Backend Developer",
-        "url": "https://github.com/rina-reimer/bit-connect"
+        "github": "https://github.com/rina-reimer/bit-connect"
     },
     "project5": {
         "title": "PeakMind",
@@ -86,11 +87,10 @@
         "active": true,
         "stack": ["figma", "swift", "firebase", "google-books"],
         "desc": "Mobile app allowing users to log and find books.",
-        "longdesc": "TODO: + Collaborated on a cross-functional team to develop a website presenting a new tabletop role-playing game.<br>+ Utilized data ingestion and querying to process user data and Google Cloud to deploy the application, while also creating a REST API to allow users interactive access to created characters and game materials.<br>+ Enhanced proficiency in UI and web development through completing 100+ hours of online courses and hands-on projects, resulting in successfully implementing interactive design elements.<br>+ Applied open-source game engines to allow users access to gameplay within the application.",
+        "longdesc": "+ Collaborated on a cross-functional team to develop an iOS app to find, log, and review books.<br>+ Utilized Google Cloud Platform for end-to-end development and Firebase Firestore databases to process user data, accessing book information from the Google Books API.<br>+ Developed app with Swift and SwiftUI, releasing the app for beta testing on the iPhone app store.+ Completed user research to ensure high customer value and user interface.",
         "tags": "app development | frontend | Swift",
         "type": "iOS App",
-        "role": "Fullstack Developer",
-        "url": ""
+        "role": "Fullstack Developer"
     },
     "class1": {
         "title": "STAT 390: Statistical Methods in Engineering and Science",
