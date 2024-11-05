@@ -3,6 +3,7 @@ import Nav from "./components/Navbar";
 import "../globals.css";
 import { dir } from 'i18next';
 import { languages } from '../i18n/settings';
+import { LanguageSwitcher } from "./components/LanguageSwitcher";
 import { Footer } from "./components/Footer";
 
 export async function generateStaticParams() {
@@ -25,6 +26,7 @@ export default function RootLayout({
   return (
     <html lang={lng} dir={dir(lng)}>
       <body className={space.className}>
+        <LanguageSwitcher lng={lng}/>
         <Nav lng={lng}/>
         {children}
         {/* insert footer here */}

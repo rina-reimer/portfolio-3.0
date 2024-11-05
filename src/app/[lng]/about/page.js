@@ -4,7 +4,6 @@ import { Divider } from "@nextui-org/divider";
 import { Button } from "@nextui-org/react";
 import { useState } from "react";
 import { useTranslation } from '@/app/i18n/client.js';
-import CourseCard from "../components/CourseCard";
 
 export default function About({ lng }) {
   const { t } = useTranslation(lng, 'common');
@@ -42,13 +41,13 @@ export default function About({ lng }) {
 function chooseTab(tabNum) {
   switch (tabNum) {
     case 0:
-      return (<p>basic info</p>);
+      return (<BasicInfo />);
     case 1:
-      return (<p>more info</p>);
+      return (<SelfDescription />);
     case 2:
-      return (<p>skeels</p>);
+      return (<Toolbox />);
     case 3:
-      return (<p>extra</p>);
+      return (<Extras />);
     default:
       return(<p>error</p>);
   }

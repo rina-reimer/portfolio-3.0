@@ -24,7 +24,7 @@ export function Model(props) {
   useFrame((state, delta) => {
     easing.dampE(
       duck.current.rotation,
-      [mousePosition.y / window.innerHeight * 1.5 - window.innerHeight / 3, 0, -mousePosition.x / window.innerWidth * 2 + 1000],
+      [mousePosition.y / window.innerHeight * 2 + window.innerHeight * 3, 0, -mousePosition.x / window.innerWidth * 2 + 1000],
       1,
       0.1
     );
