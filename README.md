@@ -1,36 +1,28 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Hey there!
+This is my personal portfolio, displaying my recent projects, resume and technical information.
 
-## Getting Started
+[image]
 
-First, run the development server:
+## Built With
+I designed and implemented this website from scratch, using a multitude of frameworks for better UI and functionality. This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+![Figma](https://img.shields.io/badge/Figma-%23F24E1E?style=for-the-badge&logo=figma&logoColor=%23FFF)
+![Next.js](https://img.shields.io/badge/Next.js-black?style=for-the-badge&logo=nextdotjs)
+![Create React App](https://img.shields.io/badge/Create%20React%20App-%2309D3AC?style=for-the-badge&logo=createreactapp&logoColor=%23FFF)
+![React](https://img.shields.io/badge/React-%2361DAFB?style=for-the-badge&logo=react&logoColor=%23000)
+![React Bootstrap](https://img.shields.io/badge/React_Bootstrap-%2341E0FD?style=for-the-badge&logo=reactbootstrap&logoColor=%23000)
+![NextUI](https://img.shields.io/badge/NextUI-black?style=for-the-badge&logo=nextui)
+![Three.js](https://img.shields.io/badge/Three.js-black?style=for-the-badge&logo=threedotjs)
+![i18next](https://img.shields.io/badge/i18next-%2326A69A?style=for-the-badge&logo=i18next&logoColor=%23FFF)
+![Framer](https://img.shields.io/badge/Framer-%230055FF?style=for-the-badge&logo=framer&logoColor=%23FFF)
+
+## Installing and Running
+First install the dependencies.
+``` 
+npm install
 ```
-
+Then run it on your local machine.
+```
+npm run dev
+```
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
