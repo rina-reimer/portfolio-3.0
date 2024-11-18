@@ -15,13 +15,12 @@ const ProjectCard = ({ name, projectNum, lng }) => {
     <div className={`card ${flip ? "flip" : ""} relative flex flex-col bg-gray h-[600px] w-[400px] border-2 border-navy rounded-[32px] overflow-clip shadow-xl`}>
       
 {/* ------------------------- FRONTSIDE ------------------------- */}
-      
       <div className="front bg-gray w-[400px] space-y-3 justify-content-center" onClick={() => setFlip(!flip)}>
         {/* upper decoration */}
         <div className="flex flex-row gap-2 pt-4 px-4">
           <SparklesIcon className="size-12 text-navy"></SparklesIcon>
           <div className="text-navy lg:text-md text-sm self-center">{name}</div>
-          <Divider className="text-navy self-center border-1 border-navy w-36"></Divider>
+          <Divider className="text-navy self-center border-1 border-navy"></Divider>
           <div className="text-navy lg:text-md text-sm self-center">no. 0{projectNum}</div>
         </div>
         {/* title */}
@@ -30,11 +29,7 @@ const ProjectCard = ({ name, projectNum, lng }) => {
         </div>
         {/* image */}
         <div className="flex flex-col relative w-[368px] mx-4 aspect-[3/2] border-2 border-navy rounded-[24px] self-center">
-          <Image className="rounded-[24px]" src={`/project-${projectNum}.png`} fill={true} sizes=""></Image>
-          {/* icon */}
-          <div className="absolute flex w-1/4 h-1/3 rounded-full border-2 border-gray border-b-navy border-r-navy bg-gray ml-[-4%] mt-[-4%] place-content-center">
-            <BookOpenIcon className="text-navy size-1/2 self-center py-1/4"></BookOpenIcon>
-          </div>
+          <Image className="rounded-[24px]" src={`/project-${projectNum}.png`} fill={true} sizes="" />
           {/* status */}
           <div className={`absolute flex w-1/3 h-1/6 rounded-full border-2 border-navy mr-[5%] mt-[-5%] ${t(`project${projectNum}.active`, {returnObjects: true}) ? "bg-active" : "bg-inactive"} self-end place-content-center overflow-hidden`}>
             <div className="sm:text-xs text-sm self-center justify-center text-gray">{t(`project${projectNum}.active`) ? "ACTIVE" : "INACTIVE"}</div>
@@ -51,7 +46,7 @@ const ProjectCard = ({ name, projectNum, lng }) => {
             {/* t(`project${projectNum}.stack`) */}
             {stack.map((item, index) => {
               return (
-                <Tooltip className="bg-navy text-gray p-2 rounded-full" content={`${t(`project${projectNum}.stack`, {returnObjects: true})[index]}`}>
+                <Tooltip key={index} className="bg-navy text-gray p-2 rounded-full" content={`${t(`project${projectNum}.stack`, {returnObjects: true})[index]}`}>
                   <div key={index} className="flex relative h-full aspect-square bg-gray border-2 border-navy z-10 hover:z-20 rounded-full">
                     <Image src={`https://img.icons8.com/color/50/${item}.png`} fill={true}></Image>
                   </div>
@@ -61,7 +56,7 @@ const ProjectCard = ({ name, projectNum, lng }) => {
           </div>
         </div>
         {/* short desc */}
-        <div className="h-24 mx-4 p-2 border-2 border-navy rounded-[24px] text-navy overflow-scroll">
+        <div className={`h-24 mx-4 p-2 border-2 border-navy rounded-[24px] text-navy ${flip ? "" : "overflow-scroll overscroll-auto"}`}>
           {t(`project${projectNum}.desc`)}
         </div>
       </div>
@@ -81,7 +76,7 @@ const ProjectCard = ({ name, projectNum, lng }) => {
 
 
         {/* long desc */}
-        <div className="h-[470px] mx-4 mb-4 p-2 border-2 border-navy rounded-[24px] text-navy text-balance overflow-scroll overscroll-auto">
+        <div className={`mx-4 mb-4 p-2 border-2 border-navy rounded-[24px] text-navy text-balance ${flip ? "overflow-scroll overscroll-auto h-[470px]" : "h-0 overflow-hidden"}`}>
           <p dangerouslySetInnerHTML={{ __html: t(`project${projectNum}.longdesc`) }}></p>
         </div>
 

@@ -4,6 +4,10 @@ import { Divider } from "@nextui-org/divider";
 import { Button } from "@nextui-org/react";
 import { useState } from "react";
 import { useTranslation } from '@/app/i18n/client.js';
+import BasicInfo from "../components/about/BasicInfo";
+import SelfDescription from "../components/about/SelfDescription";
+import Toolbox from "../components/about/Toolbox";
+import Extras from "../components/about/Extras";
 
 export default function About({ lng }) {
   const { t } = useTranslation(lng, 'common');

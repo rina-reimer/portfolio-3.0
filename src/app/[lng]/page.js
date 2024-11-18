@@ -1,7 +1,8 @@
 "use client"
 import { useEffect } from "react";
 import Image from "next/image";
-import Animation from "./components/Animation";
+import dynamic from 'next/dynamic';
+//import Animation from "./components/Animation";
 import {CoolButton} from "./components/CoolButton";
 import Banner from "./components/Banner";
 import AutoplayCarousel from "./components/AutoplayCarousel";
@@ -9,8 +10,10 @@ import CourseCard from "./components/CourseCard";
 import FeaturedProject from "./components/FeaturedProject";
 import { useTranslation } from '../i18n/client.js';
 
-export default function Home({ params: { lng } }) {
-  const { t } = useTranslation(lng, 'common')
+ const Animation = dynamic(() => import('./components/Animation'), { ssr: false });
+
+export default function Home({ lng }) {
+  const { t } = useTranslation(lng, 'common');
 
   return (
     <main className="bg-beige flex flex-row min-h-screen">
@@ -20,7 +23,7 @@ export default function Home({ params: { lng } }) {
         <div className="flex flex-row lg:w-5/6 w:full lg:h-dvh h-lvh lg:ml-36 lg:place-items-center">
           {/* profile image or 3d model */}
           <div className="relative md:w-1/3 w-0 aspect-square self-center justify-self-center px-8">
-            <Animation />
+            {/* <Animation /> */}
           </div>
           {/* hero text */}
           <div className="flex flex-col space-y-2 md:w-2/3 w-full place-content-center">
@@ -57,7 +60,7 @@ export default function Home({ params: { lng } }) {
           <div className="grid lg:grid-cols-3 grid-cols-2 gap-16">
           {[1, 2, 3, 4, 5, 6, 7].map((item) => {
               return (
-                <CourseCard classNum={item}></CourseCard>
+                <CourseCard key={item} classNum={item}></CourseCard>
               );
             })}
             

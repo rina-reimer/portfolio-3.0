@@ -20,7 +20,7 @@ export default function Work({lng}) {
         <div className="card-grid grid md:grid-cols-2 grid-cols-1 gap-12 justify-items-center">
           {[6, 5, 4, 3, 2, 1].map((item) => {
               return (
-                <ProjectCard name={t('name')} lng={lng} projectNum={[item]} />
+                <ProjectCard key={item} name={t('name')} lng={lng} projectNum={[item]} />
               );
             })}
         </div>
