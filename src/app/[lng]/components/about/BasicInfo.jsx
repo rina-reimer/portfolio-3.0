@@ -1,8 +1,8 @@
 import React from 'react';
-import { useTranslation } from '@/app/i18n/client.js';
+import { useTranslations } from 'next-intl';
 
 const BasicInfo = ({lng}) => {
-  const { t } = useTranslation(lng, 'common');
+  const t = useTranslations();
   
   return (
     <div className='flex flex-col h-full p-4 space-y-3.5'>

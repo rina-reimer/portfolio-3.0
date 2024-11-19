@@ -2,22 +2,23 @@
 import { useEffect } from "react";
 import Image from "next/image";
 import dynamic from 'next/dynamic';
+import LanguageSwitcher from "./components/LanguageSwitcher";
 //import Animation from "./components/Animation";
 import {CoolButton} from "./components/CoolButton";
 import Banner from "./components/Banner";
 import AutoplayCarousel from "./components/AutoplayCarousel";
 import CourseCard from "./components/CourseCard";
 import FeaturedProject from "./components/FeaturedProject";
-import { useTranslation } from '../i18n/client.js';
+import { useTranslations } from 'next-intl';
 
  const Animation = dynamic(() => import('./components/Animation'), { ssr: false });
 
 export default function Home({ lng }) {
-  const { t } = useTranslation(lng, 'common');
+  const t = useTranslations();
+  console.log(typeof(t));
 
   return (
     <main className="bg-beige flex flex-row min-h-screen">
-      
       <div className="flex flex-col w-full">
         {/* Hero Section */}
         <div className="flex flex-row lg:w-5/6 w:full lg:h-dvh h-lvh lg:ml-36 lg:place-items-center">
@@ -39,7 +40,7 @@ export default function Home({ lng }) {
         </div>
 
         {/* what i do banner */}
-        <AutoplayCarousel contents={t('selftags', { returnObjects: true })} />
+        <AutoplayCarousel contents={t.raw('selftags')} />
 
         {/* featured projects banner */}
         <Banner text={"featured projects"} />

@@ -3,10 +3,10 @@ import Image from 'next/image';
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import {Tooltip} from "@nextui-org/react";
-import { useTranslation } from '../../../i18n/client.js';
+import { useTranslations } from 'next-intl';
 
 const Toolbox = ({lng}) => {
-  const { t } = useTranslation(lng, 'common');
+  const t = useTranslations();
 
   const responsive = {
     superLargeDesktop: {

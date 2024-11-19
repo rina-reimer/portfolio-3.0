@@ -7,11 +7,11 @@ import "../../globals.css";
 export default function AutoplayCarousel({ contents }) {
   return (
     <>
-      <Marquee pauseOnHover="false" className=" overflow-hidden grid bg-yellow ">
-        {Object.keys(contents).map((detailKey) => {
+      <Marquee className=" overflow-hidden grid bg-yellow ">
+        {contents.map((detailKey, index) => {
             return (
-            <div key={`${detailKey}`} className=" flex flex-col justify-center items-center h-24 px-20 border-x-2 border-y-4 border-navy">
-              {contents[detailKey].toUpperCase()}
+            <div key={detailKey} className=" flex flex-col justify-center items-center h-24 px-20 border-x-2 border-y-4 border-navy">
+              {contents[index].toUpperCase()}
             </div>
             );
         })}
