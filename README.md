@@ -2,7 +2,8 @@
 
 This is my personal portfolio, displaying my recent projects, resume and technical information.
 
-[image]
+<img width="1440" alt="Screenshot 2024-11-21 at 4 46 52 PM" src="https://github.com/user-attachments/assets/fe7f0bca-1f9e-4af9-9aca-21063a380f42">
+
 
 ## Built With
 
