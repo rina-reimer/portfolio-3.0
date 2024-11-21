@@ -5,12 +5,12 @@ import dynamic from 'next/dynamic';
 import { ChevronDownIcon } from '@heroicons/react/24/outline';
 import {CoolButton} from "./components/CoolButton";
 import Banner from "./components/Banner";
+import Animation from "./components/Animation";
 import AutoplayCarousel from "./components/AutoplayCarousel";
 import CourseCard from "./components/CourseCard";
 import FeaturedProject from "./components/FeaturedProject";
 import { useTranslations } from 'next-intl';
 
- const Animation = dynamic(() => import('./components/Animation'), { ssr: false });
 
 export default function Home({lng}) {
   const t = useTranslations();
@@ -24,11 +24,12 @@ export default function Home({lng}) {
         <div className="flex flex-col lg:h-dvh h-lvh">
           <div className="flex flex-row lg:w-5/6 w-full h-[90%] lg:ml-36 pt-12 lg:place-items-center">
             {/* profile image or 3d model */}
-            <div className="relative md:w-1/3 w-0 aspect-square self-center justify-self-center px-8">
+            {/* <div className="relative md:w-1/3 w-0 aspect-square self-center justify-self-center px-8">
               <Animation />
-            </div>
+            </div> */}
             {/* hero text */}
-            <div className="flex flex-col space-y-2 pr-8 md:w-2/3 w-full place-content-center">
+            {/* md:w-2/3 */}
+            <div className="flex flex-col space-y-2 pr-8  w-full place-content-center">
               <div className="text-navy py-2">{t('hero')}</div>
               <div className="text-[5em] text-purple font-fraunces font-extrabold">{t('name')}</div>
               <div className="text-navy pb-8">{t('abt1')}</div>

@@ -23,4 +23,4 @@ export default function Animation() {
   );
 }
 
-useGLTF.preload("./public/strawhat_duck/scene.gltf");
+useGLTF.preload("/strawhat_duck/scene.gltf");
