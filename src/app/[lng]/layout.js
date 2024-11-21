@@ -4,7 +4,7 @@ import Nav from "./components/Navbar";
 import LanguageSwitcher from "./components/LanguageSwitcher";
 import Footer from "./components/Footer";
 import "../globals.css";
-import {Providers} from "../providers";
+import "bootstrap-icons/font/bootstrap-icons.css";
 import {NextIntlClientProvider} from 'next-intl';
 import {getMessages} from 'next-intl/server';
 import {notFound} from 'next/navigation';
@@ -32,12 +32,11 @@ export default async function RootLayout({ children, params }) {
       <html lang={lng} dir='ltr'>
         <body className= {`${space.className}`}>
         <NextIntlClientProvider messages={messages}>
-
-            <Nav lng={lng} />
-            <LanguageSwitcher lng={lng} />
-            {children}
-            {/* insert footer here */}
-            {/* <Footer lng={lng} /> */}
+              <Nav lng={lng} />
+              <LanguageSwitcher lng={lng} />
+              {children}
+              {/* insert footer here */}
+              {/* <Footer lng={lng} /> */}
           </NextIntlClientProvider>
         </body>
       </html>

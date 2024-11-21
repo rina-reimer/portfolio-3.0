@@ -17,18 +17,18 @@ import { easing } from "maath"
 
 export function Model(props) {
   const { nodes, materials } = useGLTF('/strawhat_duck-transformed.glb')
-  //const mousePosition = useMousePosition();
+  const mousePosition = useMousePosition();
   // This reference will give us direct access to the mesh
   const duck = useRef();
   // Subscribe this component to the render-loop, rotate the mesh every frame
-  // useFrame((state, delta) => {
-  //   easing.dampE(
-  //     duck.current.rotation,
-  //     [mousePosition.y / window.innerHeight * 2 + window.innerHeight * 3, 0, -mousePosition.x / window.innerWidth * 2 + 1000],
-  //     1,
-  //     0.1
-  //   );
-  // });
+  useFrame((state, delta) => {
+    easing.dampE(
+      duck.current.rotation,
+      [mousePosition.y / window.innerHeight * 2 + window.innerHeight * 3 - 1000, 0, -mousePosition.x / window.innerWidth * 1.5 + 1000],
+      1,
+      0.1
+    );
+  });
   return (
     <group {...props} dispose={null} ref={duck}>
       <mesh geometry={nodes.defaultMaterial.geometry} material={materials.Material} rotation={[-Math.PI, 0, 0]} scale={1.6} />

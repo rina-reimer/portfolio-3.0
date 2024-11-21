@@ -7,7 +7,7 @@ import "../../globals.css";
 export default function AutoplayCarousel({ contents }) {
   return (
     <>
-      <Marquee className=" overflow-hidden grid bg-yellow ">
+      <Marquee id="scrolled" className=" overflow-hidden grid bg-yellow ">
         {contents.map((detailKey, index) => {
             return (
             <div key={detailKey} className=" flex flex-col justify-center items-center h-24 px-20 border-x-2 border-y-4 border-navy">

@@ -1,34 +1,29 @@
 'use client'
 import Link from 'next/link';
-import { useRouter } from 'next/navigation';
-import { Dropdown, DropdownTrigger, DropdownMenu, DropdownItem } from "@nextui-org/dropdown";
-import {Button} from '@nextui-org/button';
-import { useTranslations } from 'next-intl';
+import { useRouter, usePathname } from 'next/navigation';
+import { Dropdown, DropdownTrigger, DropdownMenu, DropdownItem, Avatar } from "@nextui-org/react";
+import {Button} from "@nextui-org/react";
 import { GlobeAltIcon } from '@heroicons/react/24/outline';
 
 export default function LanguageSwitcher({ lng }) {
   const router = useRouter();
-  const t = useTranslations();
+  const pathname = usePathname().substring(3);
   console.log("Rendering LanguageSwitcher:", lng);
 
-  const handleLanguageChange = (language) => {
-    router.push(`/${language}`);
-  };
-
   return (
-    <div className='fixed right-0 top-0 z-[1000000]'>
-      <Dropdown>
-        <DropdownTrigger> Lang
-          {/* <Button>
-            <GlobeAltIcon className='h-10 w-10 m-10 text-navy outline-2 outline-navy' />
-          </Button> */}
+    <div className='fixed right-8 top-16 z-[1000000]'>
+      <Dropdown className='min-w-0 w-fit' backdrop="blur">
+        <DropdownTrigger>
+          <Button isIconOnly aria-label="Like" className='bg-beige'>
+            <GlobeAltIcon className="text-navy h-12 w-12" />
+          </Button>
         </DropdownTrigger>
         <DropdownMenu aria-label="Language Selection">
-          <DropdownItem key="en" href='/en'>
-            <span className={`${lng === 'en' ? 'text-yellow' : 'text-navy'}`}>EN</span>
+          <DropdownItem key="en" href={`/en${pathname}`}>
+              <span className={`${lng === 'en' ? 'text-yellow' : 'text-navy'}`}>EN</span>
           </DropdownItem>
-          <DropdownItem key="de" href='/de'>
-            <span className={`${lng === 'de' ? 'text-yellow' : 'text-navy'}`}>DE</span>
+          <DropdownItem key="de" href={`/de${pathname}`}>
+              <span className={`${lng === 'de' ? 'text-yellow' : 'text-navy'}`}>DE</span>
           </DropdownItem>
         </DropdownMenu>
       </Dropdown>
