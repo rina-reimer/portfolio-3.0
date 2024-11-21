@@ -48,8 +48,8 @@
         "longdesc": "+ Dieses Java-Programm benutzt den Dijkstra-Algorithmus, um innerhalb eines Fotos den Pfad von Pixeln zu finden, der am wenigsten Energie verbraucht.<br>+ Ich habe 3 Wochen im Team an diesem Studienprojekt im Rahmen meines Kurses Daten-Strukuren und Algorithmen gearbeitet.",
         "type": "Teamarbeit",
         "role": "Lead Developer",
-        "github": null,
-        "url": null
+        "github": "",
+        "url": ""
     },
     "project2": {
         "title": "Rechner für elektrische Schaltungen",
@@ -61,7 +61,7 @@
         "type": "Kursprojekt",
         "role": "Lead Developer",
         "github": "https://github.com/rina-reimer/electrical-circuit-calculator",
-        "url": null
+        "url": ""
     },
     "project3": {
         "title": "BYJU's Fallstudien",
@@ -74,7 +74,7 @@
         "type": "Fallstudien",
         "role": "Anwendungsentwicklerin",
         "github": "https://github.com/rina-reimer/byjus-capstones",
-        "url": null
+        "url": ""
     },
     "project4": {
         "title": "Bit Connect",
@@ -87,7 +87,7 @@
         "type": "Hackathon Projekt",
         "role": "Backend-Entwicklerin",
         "github": "https://github.com/rina-reimer/bit-connect",
-        "url": null
+        "url": ""
     },
     "project5": {
         "title": "PeakMind",
@@ -99,7 +99,7 @@
         "tags": "app development | UI/UX | SwiftUI",
         "type": "iOS App",
         "role": "Full-Stack-Entwicklerin",
-        "github": null,
+        "github": "",
         "url": "https://www.peaksmind.com/"
     },
     "project6": {
@@ -112,8 +112,8 @@
         "tags": "app development | frontend | Swift",
         "type": "iOS App",
         "role": "Full-Stack-Entwicklerin",
-        "github": null,
-        "url": null
+        "github": "",
+        "url": ""
     },
     "class1": {
         "title": "STAT 390: Statistische Methoden in Ingenieurwissenschaft und Science",

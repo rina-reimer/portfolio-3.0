@@ -10,22 +10,26 @@ import { SparklesIcon, BookOpenIcon } from "@heroicons/react/24/solid";
 const ProjectCard = ({ name, projectNum, lng }) => {
   const t = useTranslations(`project${projectNum}`);
   const [flip, setFlip] = useState(false);
-  const links = t('github') !== "" ? 1 : 0 + t('url') !== "" ? 1 : 0
+  const links = (t('github') !== "" ? 1 : 0) + (t('url') !== "" ? 1 : 0);
+  const isLongTitle = t('title').length > 25;
+  const hasLinks = links !== 0;
+  const heightClass = isLongTitle && hasLinks ? 'h-[370px]' : 'h-[430px]';
+
 
   return (
     <div className={`card ${flip ? "flip" : ""} relative flex flex-col bg-gray h-[600px] w-[400px] border-2 border-navy rounded-[32px] overflow-clip shadow-xl`}>
       {/* ------------------------- FRONTSIDE ------------------------- */}
-      <div className="front bg-gray w-[400px] space-y-3 justify-content-center" onClick={() => setFlip(!flip)}>
+      <div className="front bg-gray space-y-3 justify-content-center" onClick={() => setFlip(!flip)}>
         {/* upper decoration */}
-        <div className="flex flex-row w-full gap-2 pt-4 px-4">
-          <SparklesIcon className="size-12 text-navy"></SparklesIcon>
-          <div className="text-navy lg:text-md text-sm self-center">{name}</div>
-          <Divider className="text-navy self-center border-1 border-navy"></Divider>
-          <div className="text-navy lg:text-md text-sm self-center">no. 0{projectNum}</div>
+        <div className="flex flex-cols-4 w-full gap-2 pt-4 px-4">
+          <SparklesIcon className="size-12 text-navy basis-1/12"></SparklesIcon>
+          <div className="text-navy text-sm self-center basis-5/12">{name}</div>
+          <Divider className="text-navy self-center border-1 border-navy basis-1/3"></Divider>
+          <div className="text-navy lg:text-md text-sm self-center basis-1/6">no. 0{projectNum}</div>
         </div>
         {/* title */}
         <div className="grid px-4 h-16 w-full">
-          <div className="text-navy text-4xl font-fraunces justify-self-start">{t(`title`)}</div>
+          <div className="text-navy text-3xl font-fraunces justify-self-start">{t(`title`)}</div>
           
         </div>
         {/* image */}
@@ -56,18 +60,18 @@ const ProjectCard = ({ name, projectNum, lng }) => {
           </div>
         </div>
         {/* short desc */}
-        <div className={`h-24 mx-4 p-2 border-2 border-navy rounded-[24px] text-navy ${flip ? "" : "overflow-scroll overscroll-auto"}`}>
+        <div className={`h-24 mx-4 p-2 border-2 border-navy rounded-[24px] text-navy overflow-scroll overscroll-auto`}>
           {t(`desc`)}
         </div>
       </div>
 {/* ------------------------- BACKSIDE ------------------------- */}
-      <div className="back flex flex-col bg-gray" onClick={() => setFlip(!flip)}>
+      <div className={`back grid grid-col ${flip ? "h-full": "h-5"} bg-gray`} onClick={() => setFlip(!flip)}>
         {/* upper decoration */}
         <div className="flex flex-row gap-2 py-2">
-          <SparklesIcon className="size-12 text-navy"></SparklesIcon>
-          <div className="text-navy lg:text-md text-sm self-center">{name}</div>
-          <Divider className="text-navy self-center border-1 border-navy"></Divider>
-          <div className="text-navy lg:text-md text-sm self-center">no. {projectNum < 10 ? "0" : ""}{projectNum}</div>
+          <SparklesIcon className="size-12 text-navy basis-1/12"></SparklesIcon>
+          <div className="text-navy text-sm self-center basis-5/12">{name}</div>
+          <Divider className="text-navy self-center border-1 border-navy basis-1/3"></Divider>
+          <div className="text-navy lg:text-md text-sm self-center basis-1/6">no. 0{projectNum}</div>
         </div>
         {/* title */}
           <div className={`grid grid-cols-${links + 1} px-4 h-16 w-full`}>
@@ -82,7 +86,9 @@ const ProjectCard = ({ name, projectNum, lng }) => {
             </Link> : null}
           </div>        
         {/* long desc */}
-        <div className={`mx-4 mb-4 p-2 border-2 border-navy rounded-[24px] text-navy text-balance ${flip ? "overflow-scroll overscroll-auto h-[450px]" : 'h-0'}`}>
+        <div className={`mx-4 mb-4 p-2 border-2 border-navy rounded-[24px] text-navy text-balance  ${
+          flip ? `overflow-scroll overscroll-auto ${heightClass} self-end`
+          : 'h-0 self-center overflow-hidden'}`}>
           <p dangerouslySetInnerHTML={{ __html: t.raw(`longdesc`) }}></p>
         </div>
 

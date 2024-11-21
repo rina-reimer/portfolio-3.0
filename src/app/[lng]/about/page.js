@@ -20,7 +20,7 @@ export default function About({ lng }) {
         {/* Hero Section */}
         <div className="flex md:flex-row flex-col-reverse lg:w-5/6 w-full lg:ml-36 lg:mt-0 mt-32 self-center px-2">
           {/* image */}
-          <div className="relative aspect-square md:w-1/3 md:h-[44lvw] w-3/4 h-[100lvw] self-center">
+          <div className="relative aspect-square md:w-1/3 md:h-[44lvw] w-3/4 h-[100dvw] self-center">
             <Image src={'/profile.jpeg'} fill={true} sizes="4/3" alt='Photo of Rina Reimer'></Image>
           </div>
           {/* Tab selection */}
