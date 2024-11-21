@@ -60,7 +60,7 @@ const ProjectCard = ({ name, projectNum, lng }) => {
           </div>
         </div>
         {/* short desc */}
-        <div className={`h-24 mx-4 p-2 border-2 border-navy rounded-[24px] text-navy overflow-scroll overscroll-auto`}>
+        <div className={`h-24 w-[368px] mx-4 p-2 border-2 border-navy rounded-[24px] text-navy overflow-scroll overscroll-auto`}>
           {t(`desc`)}
         </div>
       </div>

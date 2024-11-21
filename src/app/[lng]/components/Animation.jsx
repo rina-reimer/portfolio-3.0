@@ -1,5 +1,5 @@
 'use client'
-import React, { useRef, useState, useEffect } from "react";
+import React from "react";
 import { Canvas } from "@react-three/fiber";
 import { useGLTF, OrbitControls } from "@react-three/drei";
 import {Model} from "./Strawhat_duck";

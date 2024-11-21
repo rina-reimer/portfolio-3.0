@@ -134,7 +134,7 @@
         "desc": "Gaußsches Eliminationsverfahren, LR-Zerlegung, QR-Zerlegung und Singulärwertzerlegung mit Python."
     },
     "class4": {
-        "title": "CSE 374: Intermediate Programming Concepts and Tools",
+        "title": "CSE 374: Intermediäre Programmierkonzepten und -betriebsmittel",
         "stack": ["c", "c-plus-plus-logo", "linux"], 
         "stack-name": ["C", "C++", "Linux"],
         "desc": "Untergeordnete Programmierung (C/C++) und explizite Speicherverwaltung; Einsatz von Linux-Systemen zur Kompilierung; Softwareentwicklungstechniken und -tools; Entwurfs-, Implementierungs- und Teststrategien."

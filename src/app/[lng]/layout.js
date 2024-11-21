@@ -35,8 +35,7 @@ export default async function RootLayout({ children, params }) {
               <Nav lng={lng} />
               <LanguageSwitcher lng={lng} />
               {children}
-              {/* insert footer here */}
-              {/* <Footer lng={lng} /> */}
+              <Footer lng={lng} />
           </NextIntlClientProvider>
         </body>
       </html>

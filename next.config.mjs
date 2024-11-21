@@ -14,6 +14,7 @@ const nextConfig = {
       },
     ],
   },
+  transpilePackages: ['three'],
 };
 
 export default withNextIntl(nextConfig);

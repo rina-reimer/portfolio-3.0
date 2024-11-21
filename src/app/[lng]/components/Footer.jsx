@@ -1,24 +1,26 @@
 "use client"
 import Link from 'next/link'
+import { useTranslations } from 'next-intl';
 
 export default function Footer({ lng }) {
-  console.log("Rendering Footer:", lng);
+  const t = useTranslations();
+
   return (
-    <footer style={{ marginBottom: 50 }}>
-      {/* <Trans i18nKey="languageSwitcher" t={t}>
-        Switch from <strong>{{lng}}</strong> to:{' '}
-      </Trans>
-      {languages.filter((l) => lng !== l).map((l, index) => {
-        return (
-          <span key={l}>
-            {index > 0 && (' or ')}
-            {/* change to be whatever path user is currently on *}
-            <Link href={`/${l}`}>
-              {l}
-            </Link>
-          </span>
-        )
-      })} */}
+    <footer className="grid mb-50 h-36 bg-yellow border-t-2 border-navy place-content-center">
+
+          <div className="grid grid-cols-2 content-center">
+          <div className="font-fraunces text-2xl self-center">&copy; {t('name')}</div>
+            <div className="self-center py-4">
+              <div className='py-4'>{t('footer-desc')}</div>
+              <div className="grid grid-cols-3 justify-items-center">
+                <a href="mailto:rinareimer616@gmail.com" title="Email" target="_blank" rel="noopener noreferrer"><span className="ico-circle"><i className="bi bi-mailbox text-4xl"></i></span></a>
+                <a href="https://www.linkedin.com/in/rina-reimer/" title="Rina-Reimer LinkedIn" target="_blank" rel="noopener noreferrer"><span className="ico-square"><i className="bi bi-linkedin text-4xl"></i></span></a>
+                <a href="https://github.com/rina-reimer" title="Rina-Reimer Github" target="_blank" rel="noopener noreferrer"><span className="ico-circle"><i className="bi bi-github text-4xl"></i></span></a>
+              </div>
+            </div>
+          </div>
+
+            
     </footer>
   )
 }

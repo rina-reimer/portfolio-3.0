@@ -24,7 +24,7 @@ export default function About({ lng }) {
             <Image src={'/profile.jpeg'} fill={true} sizes="4/3" alt='Photo of Rina Reimer'></Image>
           </div>
           {/* Tab selection */}
-          <div className="md:w-2/3 h-full flex flex-col p-8 self-start">
+          <div className="md:w-2/3 h-full w-full flex flex-col p-8 self-start">
             <div className="grid grid-cols-3 space-x-1 ">
               <Button className={`${tab === 0 ? "text-beige bg-navy" : "text-navy bg-beige"} border-navy border-2 rounded-b-none`} onClick={() => setTab(0)}>{t('home')}</Button>
               <Button className={`${tab === 1 ? "text-beige bg-navy" : "text-navy bg-beige"} border-navy border-2 rounded-b-none`} onClick={() => setTab(1)}>{t('about')}</Button>

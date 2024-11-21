@@ -10,8 +10,8 @@ export default function Nav({lng}) {
   console.log("Rendering Nav:", lng);
 
   return (
-    <nav className="nav_container fixed object-center lg:py-[25vh] py-8 lg:px-2 px-[25vw] z-[999]">
-      <div className="flex flex-col-3 lg:h-[50vh] h-24 lg:w-24 w-[50vw] lg:flex-col flex-row justify-center items-center lg:space-y-12 lg:space-x-0 space-y-0 space-x-12 bg-navy rounded-lg text-white font-extrabold">
+    <nav className="nav_container fixed object-center lg:py-[25vh] py-4 lg:px-2 px-[25vw] z-[999]">
+      <div className="flex flex-col-3 lg:h-[50vh] h-24 lg:w-24 w-[50vw] lg:flex-col flex-row justify-center items-center lg:space-y-12 lg:space-x-0 space-y-0 md:space-x-12 space-x-6 bg-navy rounded-lg text-white font-extrabold">
         <Link href={`/${lng}`}>
           <HomeIcon className={`${currentPath === `/${lng}` ? "text-navy bg-beige rounded-lg" : "text-beige"} md:size-16 size-12 cursor-crosshair`} />
         </Link>

@@ -30,11 +30,34 @@ body {
     text-wrap: balance;
   }
 }
-
-.text-fraunces {
-  font-family: var(--font-fraunces);
+.ico-circle {
+  height: 40px;
+  width: 40px;
+  display: grid;
+  border-radius: 50%;
+  line-height: 1.6;
+  color: theme('colors.navy');
+  margin: 0 20px 0 0;
+  box-shadow: 0 0 0 3px theme('colors.navy');
+  transition: all 500ms ease;
+  place-content: center;
 }
 
+.ico-square {
+  height: 40px;
+  width: 40px;
+  display: grid;
+  border-radius: 0.2rem;
+  line-height: 1.6;
+  color: theme('colors.navy');
+  margin: 0 20px 0 0;
+  box-shadow: 0 0 0 3px theme('colors.navy');
+  transition: all 500ms ease;
+  place-content: center;
+}
+
+
+/* cards for project pages */
 .card {
   transform-style: preserve-3d;
   -webkit-transform-style: preserve-3d; 
@@ -89,7 +112,11 @@ creds: https://blog.logrocket.com/create-fancy-corners-css/#:~:text=use%20SVG.-,
   height: 3em;
   width: 12em;
   mask: radial-gradient(12px at 30px 30px, transparent 98%, black) -30px -30px;
-
+}
+.box1-mobile {
+  height: 3em;
+  width: 8em;
+  mask: radial-gradient(12px at 30px 30px, transparent 98%, black) -30px -30px;
 }
 .box2 {
   height: 2.1em;
@@ -97,7 +124,13 @@ creds: https://blog.logrocket.com/create-fancy-corners-css/#:~:text=use%20SVG.-,
   mask: radial-gradient(12px at 25px 25px, transparent 98%, black) -25px -25px;
   transform: scale(0.975);
 }
-.box1 span {
+.box2-mobile {
+  height: 2.1em;
+  width: 7em;
+  mask: radial-gradient(12px at 25px 25px, transparent 98%, black) -25px -25px;
+  transform: scale(0.975);
+}
+.box1 span, .box1-mobile span {
   color: theme('colors.navy');
   padding: 1em;
 }

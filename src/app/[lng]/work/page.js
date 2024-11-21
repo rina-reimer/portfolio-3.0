@@ -16,7 +16,7 @@ export default function Work({lng}) {
         </div>
 
         {/* Projects */}
-        <div className="card-grid grid md:grid-cols-2 grid-cols-1 gap-12 px-6 justify-items-center">
+        <div className="card-grid grid md:grid-cols-2 grid-cols-1 gap-12 p-6 justify-items-center">
           {[6, 5, 4, 3, 2, 1].map((item) => {
               return (
                 <ProjectCard key={item} name={t('name')} lng={lng} projectNum={[item]} />
