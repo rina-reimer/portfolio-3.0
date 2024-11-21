@@ -5,7 +5,7 @@ import dynamic from 'next/dynamic';
 import { ChevronDownIcon } from '@heroicons/react/24/outline';
 import {CoolButton} from "./components/CoolButton";
 import Banner from "./components/Banner";
-import Animation from "./components/Animation";
+//import Animation from "./components/Animation";
 import AutoplayCarousel from "./components/AutoplayCarousel";
 import CourseCard from "./components/CourseCard";
 import FeaturedProject from "./components/FeaturedProject";
