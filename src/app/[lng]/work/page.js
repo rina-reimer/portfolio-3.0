@@ -12,7 +12,7 @@ export default function Work({lng}) {
       <div className="flex flex-col lg:w-5/6 lg:ml-36 lg:mt-16 mt-36 w-full space-y-10">
       
         <div className="grid grid-row h-52 px-8">
-          <h1 className="text-navy font-extrabold text-5xl font-fraunces self-center overflow-auto">{t('projects-title')}</h1>
+          <h1 className="text-navy font-extrabold text-4xl font-fraunces self-center overflow-auto">{t('projects-title')}</h1>
         </div>
 
         {/* Projects */}

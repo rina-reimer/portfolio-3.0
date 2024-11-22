@@ -6,9 +6,9 @@ export default function Footer({ lng }) {
   const t = useTranslations();
 
   return (
-    <footer className="grid mb-50 h-36 bg-yellow border-t-2 border-navy place-content-center">
+    <footer className="grid  bg-yellow border-t-2 border-navy place-content-center">
 
-          <div className="grid grid-cols-2 content-center">
+          <div className="grid grid-cols-2 space-x-4 px-4 content-center">
           <div className="font-fraunces text-2xl self-center">&copy; {t('name')}</div>
             <div className="self-center py-4">
               <div className='py-4'>{t('footer-desc')}</div>

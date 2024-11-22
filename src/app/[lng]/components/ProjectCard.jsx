@@ -6,6 +6,7 @@ import {Tooltip, Button} from "@nextui-org/react";
 import { useState } from "react";
 import { useTranslations } from "next-intl";
 import { SparklesIcon, BookOpenIcon } from "@heroicons/react/24/solid";
+import ProjectCardIcon from "./ProjectCardIcon";
 
 const ProjectCard = ({ name, projectNum, lng }) => {
   const t = useTranslations(`project${projectNum}`);
@@ -49,12 +50,8 @@ const ProjectCard = ({ name, projectNum, lng }) => {
         {/* dev stack */}
           <div className="flex flex-row -space-x-4">
             {t.raw(`stack`).map((item, index) => {
-              return (
-                <Tooltip key={index} className="bg-navy text-gray p-2 rounded-full" content={`${t.raw(`stack-name`)[index]}`}>
-                  <div key={index} className="flex relative h-full aspect-square bg-gray border-2 border-navy z-10 hover:z-20 rounded-full">
-                    <Image src={`https://img.icons8.com/color/50/${item}.png`} fill={true} alt={`${item} Icon`}></Image>
-                  </div>
-                </Tooltip>
+              return(
+              <ProjectCardIcon item={item} index={index} name={t.raw(`stack-name`)[index]} />
               );
             })}
           </div>

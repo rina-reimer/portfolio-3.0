@@ -110,23 +110,23 @@ creds: https://blog.logrocket.com/create-fancy-corners-css/#:~:text=use%20SVG.-,
 }
 .box1 {
   height: 3em;
-  width: 12em;
+  width: 9em;
   mask: radial-gradient(12px at 30px 30px, transparent 98%, black) -30px -30px;
 }
 .box1-mobile {
   height: 3em;
-  width: 8em;
+  width: 9em;
   mask: radial-gradient(12px at 30px 30px, transparent 98%, black) -30px -30px;
 }
 .box2 {
   height: 2.1em;
-  width: 10em;
+  width: 7em;
   mask: radial-gradient(12px at 25px 25px, transparent 98%, black) -25px -25px;
   transform: scale(0.975);
 }
 .box2-mobile {
-  height: 2.1em;
-  width: 7em;
+  height: 2.5em;
+  width: 7.7em;
   mask: radial-gradient(12px at 25px 25px, transparent 98%, black) -25px -25px;
   transform: scale(0.975);
 }

@@ -1,9 +1,11 @@
 import React from 'react';
+import { useState } from 'react';
 import Image from 'next/image';
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import {Tooltip} from "@nextui-org/react";
+import {Tooltip, Button} from "@nextui-org/react";
 import { useTranslations } from 'next-intl';
+import ToolboxIcon from './ToolboxIcon';
 
 const Toolbox = ({lng}) => {
   const t = useTranslations();
@@ -12,22 +14,22 @@ const Toolbox = ({lng}) => {
     superLargeDesktop: {
       // the naming can be any, depends on you.
       breakpoint: { max: 4000, min: 3000 },
-      items: 10,
-      slidesToSlide: 5
-    },
-    desktop: {
-      breakpoint: { max: 3000, min: 1024 },
       items: 8,
       slidesToSlide: 4
     },
-    tablet: {
-      breakpoint: { max: 1024, min: 464 },
+    desktop: {
+      breakpoint: { max: 3000, min: 1024 },
       items: 6,
       slidesToSlide: 3
     },
+    tablet: {
+      breakpoint: { max: 1024, min: 464 },
+      items: 4,
+      slidesToSlide: 2
+    },
     mobile: {
       breakpoint: { max: 464, min: 0 },
-      items: 2
+      items: 3
     }
   };
 
@@ -42,11 +44,7 @@ const Toolbox = ({lng}) => {
         responsive={responsive}>
           {t.raw(`langs`).map((item, index) => {
             return (
-              <Tooltip key={index} className="bg-navy text-gray p-2 rounded-full" content={t.raw(`langs-name`)[index]}>
-                <div className="flex relative h-16 aspect-square bg-gray border-2 border-navy  rounded-lg">
-                  <Image src={`https://img.icons8.com/color/50/${item}.png`} fill={true} alt={item}></Image>
-                </div>
-              </Tooltip>
+              <ToolboxIcon item={item} index={index} name={t.raw(`langs-name`)[index]} />
             );
           })}
         </Carousel>
@@ -62,11 +60,7 @@ const Toolbox = ({lng}) => {
         responsive={responsive}>
         {t.raw(`fmwks`).map((item, index) => {
           return (
-            <Tooltip key={index} className="bg-navy text-gray p-2 rounded-full" content={t.raw(`fmwks-name`)[index]}>
-              <div className="flex relative h-16 aspect-square bg-gray border-2 border-navy  rounded-lg">
-                <Image src={`https://img.icons8.com/color/50/${item}.png`} fill={true}alt={item}></Image>
-              </div>
-            </Tooltip>
+            <ToolboxIcon item={item} index={index} name={t.raw(`fmwks-name`)[index]} />
             );
           })}
         </Carousel>
@@ -82,11 +76,7 @@ const Toolbox = ({lng}) => {
         responsive={responsive}>
         {t.raw(`etc`).map((item, index) => {
           return (
-            <Tooltip key={index} className="bg-navy text-gray p-2 rounded-full" content={t.raw(`etc-name`)[index]}>
-              <div className="flex relative h-16 aspect-square bg-gray border-2 border-navy  rounded-lg">
-                <Image src={`https://img.icons8.com/color/50/${item}.png`} fill={true}alt={item}></Image>
-              </div>
-            </Tooltip>
+            <ToolboxIcon item={item} index={index} name={t.raw(`etc-name`)[index]} />
             );
           })}
         </Carousel>

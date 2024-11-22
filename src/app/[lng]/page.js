@@ -65,7 +65,7 @@ export default function Home({lng}) {
 
         {/* featured projects  */}
         <div className="w-full lg:pl-40 lg:px-8 px-16 py-10 space-y-10 justify-end">
-          <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-16">
+          <div className="grid md:grid-cols-2 grid-cols-1 gap-16">
           {[1, 2, 3, 4, 5, 6, 7].map((item) => {
               return (
                 <CourseCard key={item} classNum={item}></CourseCard>
