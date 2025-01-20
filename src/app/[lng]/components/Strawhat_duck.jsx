@@ -12,22 +12,19 @@ import React, {useRef} from 'react'
 import { useGLTF } from '@react-three/drei'
 import { Canvas, useFrame } from "@react-three/fiber"
 import useMousePosition from "./useMousePosition"
-import useWindowDimensions from './useWindowDimensions'
 import { easing } from "maath"
 
 
 export function Model(props) {
-  const { nodes, materials } = useGLTF('/strawhat_duck-transformed.glb');
+  const { nodes, materials } = useGLTF('/strawhat_duck-transformed.glb')
   const mousePosition = useMousePosition();
-  const { height, width } = useWindowDimensions();
-
   // This reference will give us direct access to the mesh
   const duck = useRef();
   // Subscribe this component to the render-loop, rotate the mesh every frame
   useFrame((state, delta) => {
     easing.dampE(
       duck.current.rotation,
-      [mousePosition.y / height * 1.5 + 1000, 0, -mousePosition.x / width * 1.5 + 1000],
+      [mousePosition.y / window.innerHeight * 1.5 + 1000, 0, -mousePosition.x / window.innerWidth * 1.5 + 1000],
       1,
       0.1
     );
