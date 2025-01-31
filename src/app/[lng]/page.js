@@ -36,7 +36,7 @@ export default function Home({lng}) {
               {/* start and resume button */}
               <div className="grid grid-cols-2 justify-between w-full">
                 <CoolButton text={t('start').toUpperCase()} link={`/about`} />
-                <CoolButton text={t('resume').toUpperCase()} link={"/resume.pdf"} />
+                <CoolButton text={t('resume').toUpperCase()} link={"/Reimer_Resume.pdf"} />
               </div>
               
             </div>
